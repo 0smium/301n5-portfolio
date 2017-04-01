@@ -1,0 +1,37 @@
+/* General/Body
+=============================*/
+
+body {
+  line-height: 1.5em;
+  font-size: 100%;
+  color: black;
+}
+
+/* Text
+=============================*/
+
+p {
+  font-size: 1em;
+}
+
+/* Links
+=============================*/
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: #777;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+a:visited {
+}
+
+/*IMAGE STYLES
+=======================================*/
+
+img {
+  max-width: 100%;
+}
