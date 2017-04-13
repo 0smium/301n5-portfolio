@@ -1,0 +1,39 @@
+body {
+  padding: 2em;
+  font-family: sans-serif;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-left {
+  width: 500px;
+  height: 200px;
+  background-color: blue;
+  display:block;
+}
+
+.header-left .avatar {
+  width: 150px;
+  float:left;
+}
+
+.header-left h1 {
+  font-size: 2em;
+
+  padding: .5em;
+}
+
+.header-left h2 {
+  font-size: 1.3em;
+  padding: .5em;
+}
+
+.header-right {
+  height: 200px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  background-color: red;
+}
