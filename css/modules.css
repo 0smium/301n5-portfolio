@@ -1,0 +1,7 @@
+.main-nav ul {
+  display: none;
+}
+
+.main-nav:hover ul{
+  display: block;
+}
