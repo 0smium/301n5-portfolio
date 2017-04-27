@@ -1,0 +1,57 @@
+body {
+  padding: 1em;
+  font-family: sans-serif;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-left {
+  /*width: 500px;*/
+  height: 170px;
+  /*background-color: blue;*/
+  display:block;
+}
+
+.header-left .avatar {
+  height: 170px;
+  float:left;
+}
+
+.header-left h1 {
+  margin-left: 151px;
+  font-family: 'Lato', sans-serif;
+  font-size: 3em;
+  padding: 20px 10px 0 10px;
+}
+
+.header-left h2 {
+  margin-left: 151px;
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  letter-spacing: .05em;
+  padding: 30px 10px 0 10px;
+}
+
+.header-right {
+  height: 170px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  /*background-color: red;*/
+  text-align: right;
+}
+
+.social {
+  /*padding: 1em;*/
+}
+
+.social i {
+  padding: .2em;
+}
+
+.social i:hover {
+  background-color: #aaa;
+  border-radius: .5em;
+}
