@@ -41,6 +41,7 @@ body {
   justify-content: space-between;
   align-content: flex-start;
   align-items: flex-start;
+  margin-top: .1em;
 }
 
 .social {
@@ -48,6 +49,10 @@ body {
 }
 
 .social i {
+  padding: .2em;
+}
+
+.ham i {
   padding: .2em;
 }
 
