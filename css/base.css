@@ -36,3 +36,16 @@ a:visited {
 img {
   max-width: 100%;
 }
+
+/*HEADINGS
+=======================================*/
+
+h1 {
+  font-size: 2em;
+  padding: 5px;
+}
+
+h2 {
+  font-size: 1.5em;
+  padding: 5px;
+}

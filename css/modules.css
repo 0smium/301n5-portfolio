@@ -23,6 +23,10 @@
   text-decoration: underline;
 }
 
+.template {
+  display: none;
+}
+
 /* @media only screen... */
 
 @media screen and (min-width: 700px) {

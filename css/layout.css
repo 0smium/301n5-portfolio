@@ -55,6 +55,15 @@ body {
 .ham i {
   padding: .2em;
 }
+.social a {
+  color: black;
+}
+
+.social a:hover, .social a:focus {
+  text-decoration: none;
+  /*background-color: #aaa;
+  border-radius: .5em;*/
+}
 
 .social i:hover {
   background-color: #aaa;
