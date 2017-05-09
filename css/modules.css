@@ -1,0 +1,58 @@
+.main-nav {
+  display:none;
+}
+
+.mobile-nav ul {
+  display: none;
+}
+
+.mobile-nav:hover ul{
+  display: block;
+}
+
+.ham:hover {
+  background-color: #aaa;
+  /*border-radius: .5em;*/
+}
+
+.ham li {
+  padding: .2em;
+}
+
+.ham li:hover {
+  text-decoration: underline;
+}
+
+/* @media only screen... */
+
+@media screen and (min-width: 700px) {
+  .ham, .social {
+    display: none;
+  }
+  .main-nav {
+    display:block;
+    margin-left: 151px;
+    padding: 51px 0 0 7px;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  .main-nav li {
+    display: inline-block;
+    border-bottom: 1px solid #ccc;
+    display: inline;
+    margin-right: 1em;
+  }
+
+  .main-nav li:hover {
+    border-bottom: 3px solid #ccc;
+  }
+
+  .social {
+    display: inline-block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+  }
+
+}
