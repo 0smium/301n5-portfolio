@@ -1,8 +1,12 @@
-.main-nav ul {
+.main-nav {
+  display:none;
+}
+
+.mobile-nav ul {
   display: none;
 }
 
-.main-nav:hover ul{
+.mobile-nav:hover ul{
   display: block;
 }
 
@@ -26,22 +30,22 @@
     display: none;
   }
   .main-nav {
-    /*padding: 0.1em;
-    clear: both;*/
-  }
-
-  .main-nav ul {
-    /*display: inline-block;*/
-    /*padding: 0;*/
-    /*list-style: none;*/
-    /*clear: both;*/
+    display:block;
+    margin-left: 151px;
+    padding: 51px 0 0 7px;
+    font-weight: bold;
+    font-size: 1.2em;
   }
 
   .main-nav li {
     display: inline-block;
     border-bottom: 1px solid #ccc;
     display: inline;
-    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .main-nav li:hover {
+    border-bottom: 3px solid #ccc;
   }
 
   .social {
