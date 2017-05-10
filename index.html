@@ -4,10 +4,70 @@
     <meta charset="utf-8">
     <title>Steve Walsh | Portfolio</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/modules.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.css">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <script type="text/javascript" href="js/app.js"></script>
+    <header class="header">
+      <div class="header-left">
+        <img class="avatar" src="images/avatar.jpg"/>
+        <h1>Steve Walsh</h1>
+        <h2>Coding Portfolio</h2>
+        <nav class="main-nav">
+          <ul>
+            <li>Home</li>
+            <li>Resume</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="ham-social">
+
+        <div class="ham">
+          <nav class="mobile-nav">
+            <i class="fa-2x fa fa-bars hamburger" aria-hidden="true"></i>
+            <ul>
+              <li>Home</li>
+              <li>Resume</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="social">
+          <a href="https://github.com/0smium" target="_blank"><i class="fa-2x fa fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/stephenawalsh" target="_blank"><i class="fa-2x fa fa-linkedin" aria-hidden="true"></i></a>
+          <i class="fa-2x fa fa-stack-overflow" aria-hidden="true"></i>
+          <a href="https://www.facebook.com/stephen.alexander.walsh" target="_blank"><i class="fa-2x fa fa-facebook" aria-hidden="true"></i></a>
+          <i class="fa-2x fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa-2x fa fa-twitter" aria-hidden="true"></i>
+        </div>
+      </div>
+    </header>
+
+    <section id="projects">
+      <article class="template" data-category="cat">
+        <header>
+          <h1>Title</h1>
+          <h2>Published <time pubdate datetime="2000-01-01">Publish Time</time></h2>
+        </header>
+        <section class="project-img"><a target="_blank" href=""><img src="" alt=""></a></section>
+        <section class="project-description">Project Description</section>
+      </article>
+    </section>
+    <footer>
+      This is the footer.
+    </footer>
+    <script type="text/javascript" src="js/projects.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
