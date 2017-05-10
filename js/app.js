@@ -8,6 +8,7 @@ function Project (opts) {
   this.title = opts.title;
   this.description = opts.description;
   this.url = opts.url;
+  this.imgUrl = opts.imgUrl;
   this.publishedOn = opts.publishedOn;
 }
 
@@ -20,13 +21,15 @@ Project.prototype.toHtml = function() {
   // $newProject.data('category', this.category);
 
     // lots of $newArticle.find...  (look at jQuery $.find docs)
-  $newProject.find('h1 a').attr('href', this.url);
-  $newProject.find('h1 a').text(this.title);
+  $newProject.find('a').attr('href', this.url);
+  $newProject.find('img').attr('alt', this.description);
+  $newProject.find('img').attr('src', this.imgUrl);
+  $newProject.find('h1').text(this.title);
   $newProject.find('section.project-description').html(this.description);
   $newProject.find('time').attr('datetime', this.publishedOn);
 
   // Display the date as a relative number of 'days ago'
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
+  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago.');
   $newProject.append('<hr>');
   return $newProject;
 };
