@@ -22,4 +22,11 @@ var projectData = [
     imgUrl:       'images/bus_mall.jpg',
     publishedOn:  '2017-03-04'
   },
+  {
+    title:        'Black Jack',
+    description:  'This is a fully functional Black Jack game coded strictly in vanilla JavaScript.  It features a sleek, modern design and incorporates the abity to altr bets and double-down.  It utilizes local storage for a basic leaderboard.',
+    url:          'https://0smium.github.io/BlackJack/',
+    imgUrl:       'images/blackjack.jpg',
+    publishedOn:  '2017-03-18'
+  },
 ];
