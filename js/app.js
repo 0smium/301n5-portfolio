@@ -1,6 +1,6 @@
 'use strict'
 
-// $('header h1').text('This works!');
+// $('header h1').text('This works!'); //THis is a test for file being called correctly in index.html.
 
 var projects = [];
 
@@ -18,9 +18,9 @@ Project.prototype.toHtml = function() {
   $newProject.removeClass('template');
 
   if (!this.publishedOn) $newProject.addClass('draft');
-  // $newProject.data('category', this.category);
+  // $newProject.data('category', this.category);  //!!Save for later.
 
-    // lots of $newArticle.find...  (look at jQuery $.find docs)
+    // jQuery appends the DOM for properties above.
   $newProject.find('a').attr('href', this.url);
   $newProject.find('img').attr('alt', this.description);
   $newProject.find('img').attr('src', this.imgUrl);
@@ -35,12 +35,12 @@ Project.prototype.toHtml = function() {
 };
 
 projectData.sort(function(a,b) {
-  // REVIEW: Take a look at this sort method; This may be the first time we've seen it.
+  // Sort the Projects based on newest first.
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
 projectData.forEach(function(projectObject) {
-  // REVIEW: Take a look at this forEach method; This may be the first time we've seen it.
+  // Iterate over projectData and push results to projects array.
   projects.push(new Project(projectObject));
 });
 
