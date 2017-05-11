@@ -8,6 +8,8 @@
 
 .mobile-nav:hover ul{
   display: block;
+  list-style-type: none;
+  margin-left: 0;
 }
 
 .mobile-nav a, .mobile-nav a:link, .mobile-nav a:active {
@@ -26,6 +28,7 @@
 
 .ham li {
   padding: .2em;
+  display: block;
 }
 
 .ham li:hover {
@@ -98,6 +101,11 @@
 
   .main-nav a:hover, .main-nav a:focus {
     text-decoration: none;
+  }
+
+  .main-nav ul {
+    margin-left: 0;
+    list-style-type: none;
   }
 
   .main-nav li {
