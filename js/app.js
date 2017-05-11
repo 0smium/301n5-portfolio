@@ -24,7 +24,7 @@ Project.prototype.toHtml = function() {
   $newProject.find('a').attr('href', this.url);
   $newProject.find('img').attr('alt', this.description);
   $newProject.find('img').attr('src', this.imgUrl);
-  $newProject.find('h1').text(this.title);
+  $newProject.find('h2').text(this.title);
   $newProject.find('section.project-description').html(this.description);
   $newProject.find('time').attr('datetime', this.publishedOn);
 

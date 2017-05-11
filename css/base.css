@@ -6,6 +6,7 @@ body {
   line-height: 1.5em;
   font-size: 100%;
   color: black;
+  font-family: sans-serif;
 }
 
 /* Text
@@ -39,3 +40,29 @@ img {
 
 /*HEADINGS
 =======================================*/
+
+h1 {
+  font-size: 1.6em;
+  padding: .5em 0 .5em 0;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1em;
+  padding: .2em 0 .2em 0;
+  font-weight: bold;
+  /*font-style: italic;*/
+}
+
+/*Lists
+=======================================*/
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-left: 2em;
+}
+
+li {
+  display: list-item;
+}
