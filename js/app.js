@@ -10,6 +10,7 @@ function Project (opts) {
   this.url = opts.url;
   this.imgUrl = opts.imgUrl;
   this.publishedOn = opts.publishedOn;
+  this.category = opts.category;
 }
 
 Project.prototype.toHtml = function() {
@@ -18,7 +19,7 @@ Project.prototype.toHtml = function() {
   $newProject.removeClass('template');
 
   if (!this.publishedOn) $newProject.addClass('draft');
-  // $newProject.data('category', this.category);  //!!Save for later.
+  $newProject.attr('data-category', this.category);
 
     // jQuery appends the DOM for properties above.
   $newProject.find('a').attr('href', this.url);
