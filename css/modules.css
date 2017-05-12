@@ -55,6 +55,17 @@
   font-weight: normal;
 }
 
+#projects p:first-child {
+  /*font-size: 1em;*/
+  /*padding: .1em 0 .1em 0;*/
+  font-weight: bold;
+  font-style: italic;
+}
+
+#projects p:first-child em {
+  text-decoration:underline;
+}
+
 #projects section {
   padding: 5px;
 }
@@ -78,6 +89,10 @@
 
 #projects a:hover, #projects a:focus {
   text-decoration: none;
+}
+
+.read-on {
+  padding: 5px;
 }
 
 /* @media only screen... */
