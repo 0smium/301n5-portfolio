@@ -27,7 +27,21 @@ pageView.setTeasers = function() {
   });
 };
 
+pageView.populateFilters = function() {
+  $('article').not('.template').each(function() {
+    var category, optionTag;
+    // authorName = $(this).find('address a').text();
+    // optionTag = '<option value="' + authorName + '">' + authorName + '</option>';
+    // $('#author-filter').append(optionTag);
+    category = $(this).attr('data-category');
+    optionTag = '<option value="' + category + '">' + category + '</option>';
+    if ($('#category-filter option[value="' + category + '"]').length === 0) {
+      $('#category-filter').append(optionTag);
+    }
+  });
+};
 
 //Call the above function(s).
 pageView.handleMainNav();
 pageView.setTeasers();
+pageView.populateFilters();
