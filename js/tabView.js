@@ -41,7 +41,21 @@ pageView.populateFilters = function() {
   });
 };
 
+pageView.handleCategoryFilter = function() {
+  $('#category-filter').on('change', function() {
+    if ($(this).val()) {
+      $('article').hide();
+      $('article[data-category="' + $(this).val() + '"]').fadeIn('slow');
+    } else {
+      $('article').not('.template').fadeIn('slow'); //Show all the articles except the template
+    }
+    $('#category-filter').val('');
+    // debugger;
+  });
+};
+
 //Call the above function(s).
 pageView.handleMainNav();
 pageView.setTeasers();
 pageView.populateFilters();
+pageView.handleCategoryFilter();
