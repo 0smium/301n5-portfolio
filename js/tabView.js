@@ -49,8 +49,7 @@ pageView.handleCategoryFilter = function() {
     } else {
       $('article').not('.template').fadeIn('slow'); //Show all the articles except the template
     }
-    $('#category-filter').val('');
-    // debugger;
+    // $('#category-filter').val('');
   });
 };
 
