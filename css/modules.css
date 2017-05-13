@@ -8,6 +8,17 @@
 
 .mobile-nav:hover ul{
   display: block;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.mobile-nav a, .mobile-nav a:link, .mobile-nav a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.mobile-nav a:hover, .mobile-nav a:focus {
+  text-decoration: none;
 }
 
 .ham:hover {
@@ -17,10 +28,11 @@
 
 .ham li {
   padding: .2em;
+  display: block;
 }
 
 .ham li:hover {
-  text-decoration: underline;
+  background-color: #777;
 }
 
 .template {
@@ -31,15 +43,27 @@
   padding: 5px;
 }
 
-#projects h1 {
-  font-size: 2em;
-  padding: .5em 0 0 0;
+#projects h2 {
+  font-size: 1.4em;
+  padding: .2em 0 0 0;
 }
 
-#projects h2 {
+#projects h3 {
   font-size: 1em;
   padding: .2em 0 0 0;
   font-style: italic;
+  font-weight: normal;
+}
+
+#projects p:first-child {
+  /*font-size: 1em;*/
+  /*padding: .1em 0 .1em 0;*/
+  font-weight: bold;
+  font-style: italic;
+}
+
+#projects p:first-child em {
+  text-decoration:underline;
 }
 
 #projects section {
@@ -67,6 +91,10 @@
   text-decoration: none;
 }
 
+.read-on {
+  padding: 5px;
+}
+
 /* @media only screen... */
 
 @media screen and (min-width: 700px) {
@@ -79,6 +107,20 @@
     padding: 51px 0 0 7px;
     font-weight: bold;
     font-size: 1.2em;
+  }
+
+  .main-nav a, .main-nav a:link, .main-nav a:active {
+    text-decoration: none;
+    color: black;
+  }
+
+  .main-nav a:hover, .main-nav a:focus {
+    text-decoration: none;
+  }
+
+  .main-nav ul {
+    margin-left: 0;
+    list-style-type: none;
   }
 
   .main-nav li {

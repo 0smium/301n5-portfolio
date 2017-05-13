@@ -1,6 +1,5 @@
 body {
   padding: 1em;
-  font-family: sans-serif;
 }
 .header {
   display: flex;
@@ -68,4 +67,9 @@ body {
 .social i:hover {
   background-color: #aaa;
   border-radius: .5em;
+}
+
+footer {
+  margin: 1em 0 1em 0;
+  /*font-weight: bold;*/
 }
