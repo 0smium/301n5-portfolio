@@ -4,35 +4,41 @@
 
 var projects = [];
 
-function Project (opts) {
-  this.title = opts.title;
-  this.description = opts.description;
-  this.url = opts.url;
-  this.imgUrl = opts.imgUrl;
-  this.publishedOn = opts.publishedOn;
-  this.category = opts.category;
+function Project (projectDataObj) {
+  this.title = projectDataObj.title;
+  this.description = projectDataObj.description;
+  this.url = projectDataObj.url;
+  this.imgUrl = projectDataObj.imgUrl;
+  this.publishedOn = projectDataObj.publishedOn;
+  this.category = projectDataObj.category;
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
+  var templateScript = $('#article-template').html();
+  var template = Handlebars.compile(templateScript);
 
-  $newProject.removeClass('template');
+  // var $newProject = $('article.template').clone();
 
-  if (!this.publishedOn) $newProject.addClass('draft');
-  $newProject.attr('data-category', this.category);
+  // $newProject.removeClass('template');
+
+  // if (!this.publishedOn) $newProject.addClass('draft');
+  // $newProject.attr('data-category', this.category);
 
     // jQuery appends the DOM for properties above.
-  $newProject.find('a').attr('href', this.url);
-  $newProject.find('img').attr('alt', this.description);
-  $newProject.find('img').attr('src', this.imgUrl);
-  $newProject.find('h2').text(this.title);
-  $newProject.find('section.project-description').html(this.description);
-  $newProject.find('time').attr('datetime', this.publishedOn);
+  // $newProject.find('a').attr('href', this.url);
+  // $newProject.find('img').attr('alt', this.description);
+  // $newProject.find('img').attr('src', this.imgUrl);
+  // $newProject.find('h2').text(this.title);
+  // $newProject.find('section.project-description').html(this.description);
+  // $newProject.find('time').attr('datetime', this.publishedOn);
 
   // Display the date as a relative number of 'days ago'
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago.');
-  $newProject.append('<hr>');
-  return $newProject;
+  // $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago.');
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  this.publishStatus = this.publishedOn ? `about ${this.daysAgo} days ago.` : '(draft)';
+  // $newProject.append('<hr>');
+  // return $newProject;
+  return template(this)
 };
 
 projectData.sort(function(a,b) {
