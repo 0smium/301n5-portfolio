@@ -15,25 +15,15 @@
       crossorigin="anonymous">
     </script>
     <script id="article-template" type="text/x-handlebars-template">
-      <!-- <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
-        <header>
-          <h1>{{title}}</h1>
-          <div calss="byline">
-            By <address><a href="{{authorUrl}}">{{author}}</a></address>
-            {{publishStatus}}
-          </div>
-        </header>
-        <section class="article-body">{{{body}}}</section>
-        <a href="#" class="read-on">Read On &rarr;</a>
-      </article> -->
       <article class="clearfix" data-category="{{category}}">
         <header>
           <h2>{{title}}</h2>
           <h3>{{publishStatus}}</h3>
         </header>
         <section class="project-img"><a target="_blank" href="{{url}}"><img src="{{imgUrl}}" alt="{{title}}"></a></section>
-        <section class="project-description">{{description}}</section>
+        <section class="project-description">{{{description}}}</section>
         <a href="#" class="read-on">Read on &rarr;</a>
+        <hr/>
       </article>
     </script>
   </head>
