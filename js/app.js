@@ -21,15 +21,18 @@ Project.prototype.toHtml = function() {
   return template(this)
 };
 
-projectData.sort(function(a,b) {
-  // Sort the Projects based on newest first.
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
+Project.loadAll = function(rawData) {
 
-projectData.forEach(function(projectObject) {
-  // Iterate over projectData and push results to projects array.
-  projects.push(new Project(projectObject));
-});
+  rawData.sort(function(a,b) {
+    // Sort the Projects based on newest first.
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
+
+  rawData.forEach(function(projectEle) {
+    // Iterate over projectData and push results to projects array.
+    projects.push(new Project(projectEle));
+  });
+}
 
 projects.forEach(function(a) {
   $('#projects').append(a.toHtml());
