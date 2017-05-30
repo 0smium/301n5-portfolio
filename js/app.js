@@ -55,4 +55,5 @@ Project.initIndexPage = function(){
   Project.all.forEach(function(a) {
     $('#projects').append(a.toHtml());
   })
+  pageView.setTeasers();
 };
