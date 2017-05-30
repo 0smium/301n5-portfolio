@@ -2,8 +2,6 @@
 
 // $('header h1').text('This works!'); //THis is a test for file being called correctly in index.html.
 
-var projects = [];
-
 function Project (projectDataObj) {
   this.title = projectDataObj.title;
   this.description = projectDataObj.description;
@@ -13,6 +11,8 @@ function Project (projectDataObj) {
   this.category = projectDataObj.category;
 }
 
+Project.all = [];
+
 Project.prototype.toHtml = function() {
   var templateScript = $('#article-template').html();
   var template = Handlebars.compile(templateScript);
@@ -21,16 +21,39 @@ Project.prototype.toHtml = function() {
   return template(this)
 };
 
-projectData.sort(function(a,b) {
-  // Sort the Projects based on newest first.
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
+Project.loadAll = function(rawData) {
 
-projectData.forEach(function(projectObject) {
-  // Iterate over projectData and push results to projects array.
-  projects.push(new Project(projectObject));
-});
+  rawData.sort(function(a,b) {
+    // Sort the Projects based on newest first.
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
 
-projects.forEach(function(a) {
-  $('#projects').append(a.toHtml());
-});
+  rawData.forEach(function(projectEle) {
+    // Iterate over projectData and push results to projects array.
+    Project.all.push(new Project(projectEle));
+  });
+}
+
+Project.fetchAll = function() {
+  if (localStorage.rawData) {
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    Project.initIndexPage();
+  }
+  else {
+    $.ajax({url: '/data/projects.json'})
+      .done(function(data) {
+        console.log(data);
+        localStorage.setItem('rawData', JSON.stringify(data));
+        Project.loadAll(JSON.parse(localStorage.rawData));
+        Project.initIndexPage();
+      });
+  }
+}
+
+
+Project.initIndexPage = function(){
+  Project.all.forEach(function(a) {
+    $('#projects').append(a.toHtml());
+  })
+  pageView.setTeasers();
+};

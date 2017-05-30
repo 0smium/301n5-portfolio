@@ -27,10 +27,18 @@ var projectData = [
   },
   {
     title:        'Black Jack',
-    description:  '<p>A fully functional Black Jack game coded strictly in vanilla JavaScript.</p><p>This was a group project for the completion of Code 301.  It features a sleek, modern design and incorporates the abity to alter bets and double-down.  It also utilizes local storage for a basic leaderboard.</p>',
+    description:  '<p>A fully functional Black Jack game coded strictly in vanilla JavaScript.</p><p>This was a group project for the completion of Code 201.  It features a sleek, modern design and incorporates the abity to alter bets and double-down.  It also utilizes local storage for a basic leaderboard.</p>',
     url:          'https://0smium.github.io/BlackJack/',
     imgUrl:       'images/blackjack.jpg',
     publishedOn:  '2017-03-18',
     category:     'Games'
+  },
+  {
+    title:        'Trend of the World',
+    description:  '<p>A fully functional app that populates tiles from sources of trending internet topics and links them to their source.</p><p>This app was a group project for the completion of Code 301.  It features a contemporary design and a color scheme toggle (dark and light).  The app is deployed to Heroku.  AJAX requests for trending topics are cached into PostgreSQL every ten minutes uisng Heroku Scheduler.  The page is current whenever a user loads it and automatically refreshes results after 60s of idle without reloading the page.</p>',
+    url:          'http://trendofthe.world',
+    imgUrl:       'images/totw.jpg',
+    publishedOn:  '2017-05-19',
+    category:     'Trending'
   },
 ];
