@@ -2,8 +2,6 @@
 
 // $('header h1').text('This works!'); //THis is a test for file being called correctly in index.html.
 
-var projects = [];
-
 function Project (projectDataObj) {
   this.title = projectDataObj.title;
   this.description = projectDataObj.description;
@@ -12,6 +10,8 @@ function Project (projectDataObj) {
   this.publishedOn = projectDataObj.publishedOn;
   this.category = projectDataObj.category;
 }
+
+Project.all = [];
 
 Project.prototype.toHtml = function() {
   var templateScript = $('#article-template').html();
@@ -30,10 +30,29 @@ Project.loadAll = function(rawData) {
 
   rawData.forEach(function(projectEle) {
     // Iterate over projectData and push results to projects array.
-    projects.push(new Project(projectEle));
+    Project.all.push(new Project(projectEle));
   });
 }
 
-projects.forEach(function(a) {
-  $('#projects').append(a.toHtml());
-});
+Project.fetchAll = function() {
+  if (localStorage.rawData) {
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    Project.initIndexPage();
+  }
+  else {
+    $.ajax({url: '/data/projects.json'})
+      .done(function(data) {
+        console.log(data);
+        localStorage.setItem('rawData', JSON.stringify(data));
+        Project.loadAll(JSON.parse(localStorage.rawData));
+        Project.initIndexPage();
+      });
+  }
+}
+
+
+Project.initIndexPage = function(){
+  Project.all.forEach(function(a) {
+    $('#projects').append(a.toHtml());
+  })
+};

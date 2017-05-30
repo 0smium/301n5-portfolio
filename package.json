@@ -1,0 +1,15 @@
+{
+  "name": "steve-portfolio",
+  "version": "0.1.0",
+  "description": "Steve's Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steve Walsh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "fs": "0.0.1-security"
+  }
+}
