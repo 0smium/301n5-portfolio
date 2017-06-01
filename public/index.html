@@ -35,10 +35,10 @@
         <h2>Coding Portfolio</h2>
         <nav class="nav main-nav">
           <ul>
-            <li class="tab" data-content="projects"><a href="#">Home</a></li>
-            <li class="tab" data-content="resume"><a href="#">Resume</a></li>
-            <li class="tab" data-content="about"><a href="#">About</a></li>
-            <li class="tab" data-content="contact"><a href="#">Contact</a></li>
+            <li class="tab"><a href="./">Home</a></li>
+            <li class="tab"><a href="./resume">Resume</a></li>
+            <li class="tab"><a href="./about">About</a></li>
+            <li class="tab"><a href="./contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -48,10 +48,10 @@
           <nav class="nav mobile-nav">
             <i class="fa-2x fa fa-bars hamburger" aria-hidden="true"></i>
             <ul>
-              <li class="tab" data-content="projects"><a href="#">Home</a></li>
-              <li class="tab" data-content="resume"><a href="#">Resume</a></li>
-              <li class="tab" data-content="about"><a href="#">About</a></li>
-              <li class="tab" data-content="contact"><a href="#">Contact</a></li>
+              <li class="tab"><a href="./home">Home</a></li>
+              <li class="tab"><a href="./resume">Resume</a></li>
+              <li class="tab"><a href="./about">About</a></li>
+              <li class="tab"><a href="./contact">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -120,10 +120,12 @@
     <footer>
       This is the footer.
     </footer>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <!-- <script type="text/javascript" src="js/projects.js"></script> -->
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/tabView.js"></script>
+    <script type="text/javascript" src="js/models/app.js"></script>
+    <script type="text/javascript" src="js/views/projectView.js"></script>
+    <script src="/js/controllers/routes.js"></script>
     <script>
       Project.fetchAll();
     </script>

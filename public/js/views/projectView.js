@@ -3,15 +3,6 @@
 //Create pageView object for holding all functions for display tweaks and tab navigation.
 var pageView = {};
 
-//Allows single-page app to display 'tab-content' using main-nav.
-pageView.handleMainNav = function () {
-  $('.nav').on('click', '.tab', function() {
-    $('.tab-content').hide();  //Hides all tab-content sections.
-    $('#' + $(this).attr('data-content')).fadeIn('slow');  //Fade in single .tab-content based on .tab element's data-content attribute.
-  });
-  $('.main-nav .tab:first').click(); //Event listener for .main-nav and .tab:first elements.
-};
-
 pageView.setTeasers = function() {
   $('.project-description p:nth-of-type(n+2)').hide(); // Truncate logic to show only first two elements within the project-description body.
   $('article').on('click', '.read-on', function(e){ //event handler
@@ -54,7 +45,7 @@ pageView.handleCategoryFilter = function() {
 };
 
 //Call the above function(s).
-pageView.handleMainNav();
+// pageView.handleMainNav();
 // pageView.setTeasers();  //now called in app.js
 // pageView.populateFilters();  //now called in app.js
 // pageView.handleCategoryFilter();  //now called in app.js
