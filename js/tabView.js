@@ -55,6 +55,6 @@ pageView.handleCategoryFilter = function() {
 
 //Call the above function(s).
 pageView.handleMainNav();
-// pageView.setTeasers();
-pageView.populateFilters();
-pageView.handleCategoryFilter();
+// pageView.setTeasers();  //now called in app.js
+// pageView.populateFilters();  //now called in app.js
+// pageView.handleCategoryFilter();  //now called in app.js
