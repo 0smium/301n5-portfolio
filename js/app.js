@@ -56,4 +56,6 @@ Project.initIndexPage = function(){
     $('#projects').append(a.toHtml());
   })
   pageView.setTeasers();
+  pageView.populateFilters();
+  pageView.handleCategoryFilter();
 };
